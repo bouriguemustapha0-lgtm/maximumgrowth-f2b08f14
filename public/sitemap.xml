@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>/</loc><xhtml:link rel="alternate" hreflang="fr" href="/"/><xhtml:link rel="alternate" hreflang="en" href="/en"/></url>
+  <url><loc>/creation-site-web</loc><xhtml:link rel="alternate" hreflang="en" href="/en/web-design"/></url>
+  <url><loc>/freelance-site-web</loc><xhtml:link rel="alternate" hreflang="en" href="/en/freelance-web-designer"/></url>
+  <url><loc>/agence-web</loc><xhtml:link rel="alternate" hreflang="en" href="/en/web-agency"/></url>
+  <url><loc>/services</loc><xhtml:link rel="alternate" hreflang="en" href="/en/services"/></url>
+  <url><loc>/realisations</loc><xhtml:link rel="alternate" hreflang="en" href="/en/work"/></url>
+  <url><loc>/seo</loc><xhtml:link rel="alternate" hreflang="en" href="/en/seo"/></url>
+  <url><loc>/a-propos</loc><xhtml:link rel="alternate" hreflang="en" href="/en/about"/></url>
+  <url><loc>/blog</loc><xhtml:link rel="alternate" hreflang="en" href="/en/blog"/></url>
+  <url><loc>/contact</loc><xhtml:link rel="alternate" hreflang="en" href="/en/contact"/></url>
+  <url><loc>/en</loc></url><url><loc>/en/web-design</loc></url><url><loc>/en/freelance-web-designer</loc></url><url><loc>/en/web-agency</loc></url><url><loc>/en/services</loc></url><url><loc>/en/work</loc></url><url><loc>/en/seo</loc></url><url><loc>/en/about</loc></url><url><loc>/en/blog</loc></url><url><loc>/en/contact</loc></url>
+</urlset>
