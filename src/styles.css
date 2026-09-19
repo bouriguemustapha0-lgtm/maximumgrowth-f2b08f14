@@ -19,7 +19,7 @@
  */
 
 @theme inline {
-  --font-display: "Fraunces", Georgia, serif;
+  --font-display: "Space Grotesk", Arial, sans-serif;
   --font-sans: "Manrope", Arial, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -65,25 +65,25 @@
 
 :root {
   --radius: 0.375rem;
-  --background: oklch(0.17369 0.01245 166.8);
-  --foreground: oklch(0.95394 0.01343 97.445);
-  --card: oklch(0.22943 0.0151 157.554);
-  --card-foreground: oklch(0.95394 0.01343 97.445);
-  --popover: oklch(0.22943 0.0151 157.554);
-  --popover-foreground: oklch(0.95394 0.01343 97.445);
-  --primary: oklch(0.72801 0.13798 89.726);
-  --primary-foreground: oklch(0.17369 0.01245 166.8);
-  --secondary: oklch(0.59159 0.09167 143.861);
-  --secondary-foreground: oklch(0.95394 0.01343 97.445);
-  --muted: oklch(0.269 0.018 158);
-  --muted-foreground: oklch(0.76 0.018 97);
-  --accent: oklch(0.59159 0.09167 143.861);
-  --accent-foreground: oklch(0.95394 0.01343 97.445);
+  --background: oklch(0.105 0.018 22);
+  --foreground: oklch(0.96 0.008 25);
+  --card: oklch(0.145 0.027 22);
+  --card-foreground: oklch(0.96 0.008 25);
+  --popover: oklch(0.145 0.027 22);
+  --popover-foreground: oklch(0.96 0.008 25);
+  --primary: oklch(0.64 0.24 24);
+  --primary-foreground: oklch(0.99 0.004 25);
+  --secondary: oklch(0.36 0.12 24);
+  --secondary-foreground: oklch(0.96 0.008 25);
+  --muted: oklch(0.19 0.028 22);
+  --muted-foreground: oklch(0.7 0.018 25);
+  --accent: oklch(0.57 0.22 24);
+  --accent-foreground: oklch(0.99 0.004 25);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.38 0.025 150);
-  --input: oklch(0.38 0.025 150);
-  --ring: oklch(0.72801 0.13798 89.726);
+  --border: oklch(0.3 0.065 23);
+  --input: oklch(0.3 0.065 23);
+  --ring: oklch(0.64 0.24 24);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -150,12 +150,20 @@
   }
 
   h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0; }
+  h1, h2 { font-weight: 700; }
   ::selection { background: var(--color-primary); color: var(--color-primary-foreground); }
   :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
 }
 
 @utility text-balance { text-wrap: balance; }
 @utility rise-in { animation: rise-in 700ms cubic-bezier(.2,.8,.2,1) both; }
+@utility brand-grid {
+  background-image: linear-gradient(to right, color-mix(in oklab, var(--primary) 10%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in oklab, var(--primary) 10%, transparent) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+@utility brand-glow {
+  background: radial-gradient(circle at 68% 42%, color-mix(in oklab, var(--primary) 22%, transparent), transparent 38%);
+}
 
 @keyframes rise-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; scroll-behavior: auto !important; } }
