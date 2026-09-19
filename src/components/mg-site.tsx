@@ -1,5 +1,5 @@
 import { useState, type FormEvent, type ReactNode } from "react";
-import { ArrowUpRight, Check, ChevronRight, Globe2, Menu, MessageCircle, X } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, ChevronRight, Globe2, Instagram, Mail, Menu, MessageCircle, Phone, X } from "lucide-react";
 import { z } from "zod";
 import heroImage from "@/assets/mg-growth-hero.jpg";
 import mgLogo from "@/assets/mg-logo-red.png.asset.json";
