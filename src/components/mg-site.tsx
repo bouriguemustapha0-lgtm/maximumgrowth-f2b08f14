@@ -4,17 +4,21 @@ import { z } from "zod";
 import heroImage from "@/assets/mg-growth-hero.jpg";
 import mgLogo from "@/assets/mg-logo-red.png.asset.json";
 import mustaphaPortrait from "@/assets/mustapha-bourigue-portrait.png.asset.json";
+import riadDarMedinaLand from "@/assets/riad-dar-medina-land.webp.asset.json";
+import riadFesBabRcif from "@/assets/riad-fes-bab-rcif.webp.asset.json";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { routes, whatsappNumber, whatsappUrl, type Language, type PageKey } from "@/lib/mg-content";
 
 const projectData = [
-  { name: "Velsatis Hotel", sector: "Hôtellerie · Béni Mellal", url: "https://www.velsatishotel.com/", alt: "Capture d'écran du site web créé pour Velsatis Hotel, Béni Mellal" },
-  { name: "Bougainvilla Retreat", sector: "Maison d'hôtes · Mohammedia", url: "https://www.bougainvillaretreat.com/", alt: "Site de réservation créé pour Bougainvilla Retreat, maison d'hôtes" },
-  { name: "Dar Azur", sector: "Riad de luxe · Spa", url: "https://darazur.lovable.app", alt: "Site web du riad de luxe Dar Azur avec spa" },
-  { name: "Maison Aurelle", sector: "Hôtel 5 étoiles", url: "https://golden-suite-showcase.lovable.app", alt: "Site vitrine créé pour l'hôtel Maison Aurelle avec réservation en ligne" },
-  { name: "Red Flame", sector: "Restaurant · Steakhouse", url: "https://redflame.lovable.app", alt: "Site web du restaurant Red Flame avec réservation de table" },
+  { name: "Riad Dar Medina Land", sector: "Riad · Marrakech", url: "https://www.riaddarmedinaland.com/", image: riadDarMedinaLand.url, alt: "Page d'accueil du site Riad Dar Medina Land à Marrakech" },
+  { name: "Riad Fès Bab Rcif", sector: "Riad-hôtel · Fès", url: "https://www.riadbabrciffes.com/", image: riadFesBabRcif.url, alt: "Page d'accueil du site Riad Fès Bab Rcif dans la médina de Fès" },
+  { name: "Velsatis Hotel", sector: "Hôtellerie · Béni Mellal", url: "https://www.velsatishotel.com/", image: heroImage, alt: "Capture d'écran du site web créé pour Velsatis Hotel, Béni Mellal" },
+  { name: "Bougainvilla Retreat", sector: "Maison d'hôtes · Mohammedia", url: "https://www.bougainvillaretreat.com/", image: heroImage, alt: "Site de réservation créé pour Bougainvilla Retreat, maison d'hôtes" },
+  { name: "Dar Azur", sector: "Riad de luxe · Spa", url: "https://darazur.lovable.app", image: heroImage, alt: "Site web du riad de luxe Dar Azur avec spa" },
+  { name: "Maison Aurelle", sector: "Hôtel 5 étoiles", url: "https://golden-suite-showcase.lovable.app", image: heroImage, alt: "Site vitrine créé pour l'hôtel Maison Aurelle avec réservation en ligne" },
+  { name: "Red Flame", sector: "Restaurant · Steakhouse", url: "https://redflame.lovable.app", image: heroImage, alt: "Site web du restaurant Red Flame avec réservation de table" },
 ];
 
 const navKeys: PageKey[] = ["agency", "services", "work", "seo", "about", "blog"];
@@ -59,7 +63,7 @@ function Section({ children, surface = false, className = "" }: { children: Reac
 function PageIntro({ eyebrow, title, children }: { eyebrow: string; title: string; children?: ReactNode }) { return <Section className="relative overflow-hidden"><div className="rise-in max-w-4xl pb-2 pt-5 md:pb-6 md:pt-12"><Eyebrow>{eyebrow}</Eyebrow><h1 className="text-balance text-5xl font-medium leading-[1.05] text-foreground md:text-7xl">{title}</h1>{children && <div className="mt-8 max-w-3xl text-lg leading-8 text-muted-foreground">{children}</div>}</div></Section>; }
 function CTA({ lang, children }: { lang: Language; children: ReactNode }) { return <Section surface><div className="grid items-end gap-8 md:grid-cols-[1fr_auto]"><div><Eyebrow>Maximum Growth</Eyebrow><h2 className="max-w-3xl text-4xl font-medium leading-tight md:text-5xl">{children}</h2></div><Button variant="premium" size="lg" asChild><a href={whatsappUrl} target="_blank" rel="noreferrer"><MessageCircle/>{lang === "fr" ? "WhatsApp +212 699 309 986" : "Message us on WhatsApp"}</a></Button></div></Section>; }
 function FeatureGrid({ items }: { items: Array<[string,string]> }) { return <div className="mt-10 grid gap-px bg-border md:grid-cols-2">{items.map(([title,text],i)=><article key={title} className="group bg-background p-7 transition-colors hover:bg-card md:p-9"><span className="text-xs font-bold text-primary">0{i+1}</span><h3 className="mt-8 text-2xl">{title}</h3><p className="mt-3 text-muted-foreground">{text}</p></article>)}</div>; }
-function ProjectGrid({ limit }: { limit?: number }) { return <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{projectData.slice(0,limit).map((p,i)=><a key={p.name} href={p.url} target="_blank" rel="noreferrer" className="group overflow-hidden border border-border bg-card"><div className="relative aspect-[4/3] overflow-hidden bg-background" role="img" aria-label={p.alt}><img src={heroImage} width="1600" height="1000" loading="lazy" alt={p.alt} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" style={{objectPosition:`${58+i*8}% center`}}/><span className="absolute inset-0 bg-background/20"/><span className="absolute left-5 top-5 font-display text-6xl text-primary/70">0{i+1}</span></div><div className="flex items-end justify-between p-6"><div><h3 className="text-2xl">{p.name}</h3><p className="mt-1 text-sm text-muted-foreground">{p.sector}</p></div><ArrowUpRight className="size-5 text-primary"/></div></a>)}</div>; }
+function ProjectGrid({ limit }: { limit?: number }) { return <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{projectData.slice(0,limit).map((p,i)=><a key={p.name} href={p.url} target="_blank" rel="noreferrer" className="group overflow-hidden border border-border bg-card"><div className="relative aspect-[4/3] overflow-hidden bg-background"><img src={p.image} width="1200" height="900" loading="lazy" alt={p.alt} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"/><span className="absolute inset-0 bg-background/10"/><span className="absolute left-5 top-5 font-display text-6xl text-primary/80">0{i+1}</span></div><div className="flex items-end justify-between p-6"><div><h3 className="text-2xl">{p.name}</h3><p className="mt-1 text-sm text-muted-foreground">{p.sector}</p></div><ArrowUpRight className="size-5 text-primary"/></div></a>)}</div>; }
 
 export function HomePage({ lang }: { lang: Language }) {
  const fr=lang==="fr";
