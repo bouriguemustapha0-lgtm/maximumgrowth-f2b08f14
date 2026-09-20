@@ -1,7 +1,6 @@
 import { useState, type FormEvent, type ReactNode } from "react";
 import { ArrowRight, ArrowUpRight, Check, ChevronRight, Globe2, Instagram, Mail, Menu, MessageCircle, Phone, X } from "lucide-react";
 import { z } from "zod";
-import heroImage from "@/assets/mg-growth-hero.jpg";
 import bougainvillaRetreat from "@/assets/bougainvilla-retreat.webp.asset.json";
 import darAzur from "@/assets/dar-azur.webp.asset.json";
 import maisonAurelle from "@/assets/maison-aurelle.webp.asset.json";
