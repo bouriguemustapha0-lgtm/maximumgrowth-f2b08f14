@@ -19,54 +19,60 @@ export const routes: Record<PageKey, { fr: string; en: string }> = {
 
 export const meta: Record<PageKey, Record<Language, { title: string; description: string }>> = {
   home: {
-    fr: { title: "MG — Création de Sites Web à Béni Mellal | Mustapha Bourigue", description: "MG conçoit des sites web modernes et optimisés SEO à Béni Mellal, pour tous les secteurs. Devis gratuit, réponse rapide sur WhatsApp." },
-    en: { title: "MG — Website Design in Béni Mellal | Mustapha Bourigue", description: "MG builds modern, SEO-optimised websites in Béni Mellal for every industry. Free quote and fast replies on WhatsApp." },
+    fr: { title: "Maximum Growth — Agence Digitale en Ligne | Maroc & International", description: "Sites web, SEO et croissance digitale pour les entreprises modernes. Agence en ligne au service du Maroc et de clients à l'international." },
+    en: { title: "Maximum Growth — Online Digital Agency | Morocco & International", description: "Websites, SEO and digital growth for modern businesses. An online agency serving Morocco and clients internationally." },
   },
   creation: {
-    fr: { title: "Création de Site Web à Béni Mellal — Devis Gratuit | MG", description: "Besoin d'un site web professionnel à Béni Mellal ? Sites rapides, responsive et optimisés SEO. Découvrez nos tarifs et notre process de création." },
-    en: { title: "Website Design in Béni Mellal — Free Quote | MG", description: "Need a professional website in Béni Mellal? Fast, responsive and SEO-optimised websites. Discover our pricing and design process." },
+    fr: { title: "Création de Site Web au Maroc — Agence en Ligne | MG", description: "MG crée des sites rapides, responsive et optimisés SEO à distance pour les entreprises au Maroc, notamment à Béni Mellal, et à l'international." },
+    en: { title: "Website Design in Morocco — Online Agency | MG", description: "MG builds fast, responsive and SEO-optimised websites remotely for businesses across Morocco, including Béni Mellal, and internationally." },
   },
   freelance: {
-    fr: { title: "Freelance Site Web Béni Mellal — Développeur Web Indépendant | MG", description: "Freelance spécialisé en création de sites web à Béni Mellal. Tarifs directs sans intermédiaire, contact rapide, sites livrés en 2 à 4 semaines." },
-    en: { title: "Freelance Web Designer Béni Mellal — Independent Developer | MG", description: "Freelance website specialist in Béni Mellal. Direct pricing, fast communication and websites delivered in 2 to 4 weeks." },
+    fr: { title: "Freelance Site Web au Maroc — Service à Distance | MG", description: "Travaillez directement et à distance avec Mustapha Bourigue pour votre site web au Maroc, y compris à Béni Mellal, ou à l'international." },
+    en: { title: "Freelance Web Designer in Morocco — Remote Service | MG", description: "Work directly and remotely with Mustapha Bourigue on your website across Morocco, including Béni Mellal, or internationally." },
   },
   agency: {
-    fr: { title: "Agence Web à Béni Mellal — Sites & SEO | Maximum Growth", description: "MG est une agence web basée à Béni Mellal : conception de sites, référencement SEO et optimisation. Accompagnement complet pour votre présence en ligne." },
-    en: { title: "Web Agency in Béni Mellal — Websites & SEO | Maximum Growth", description: "MG is a web agency in Béni Mellal offering website design, SEO and optimisation. Complete support for your online presence." },
+    fr: { title: "Maximum Growth — Agence Digitale à Distance | Sites & SEO", description: "Agence digitale en ligne pour les entreprises au Maroc et à l'international. Sites web, SEO et accompagnement à distance, notamment à Béni Mellal." },
+    en: { title: "Maximum Growth — Remote Digital Agency | Websites & SEO", description: "An online digital agency serving businesses across Morocco and internationally with websites, SEO and remote support, including Béni Mellal." },
   },
   services: {
-    fr: { title: "Services Web & SEO à Béni Mellal | MG", description: "Sites web sur mesure, SEO, performance mobile et intégrations WhatsApp/réservation. Découvrez tous les services de MG pour faire grandir votre activité." },
-    en: { title: "Web & SEO Services in Béni Mellal | MG", description: "Custom websites, SEO, mobile performance and WhatsApp or booking integrations. Discover MG services for growing your business." },
+    fr: { title: "Services Web, SEO & Croissance Digitale | MG", description: "Sites web sur mesure, SEO, performance mobile et intégrations pour les entreprises au Maroc et à l'international, entièrement à distance." },
+    en: { title: "Web, SEO & Digital Growth Services | MG", description: "Custom websites, SEO, mobile performance and integrations for businesses across Morocco and internationally, delivered fully remotely." },
   },
   work: {
-    fr: { title: "Réalisations — Sites Web Créés par MG | Béni Mellal", description: "Découvrez les sites web réalisés par MG : hôtellerie, restaurants et plus. Design moderne, SEO intégré, résultats concrets pour nos clients." },
-    en: { title: "Work — Websites Created by MG | Béni Mellal", description: "Explore websites created by MG for hotels, restaurants and more. Modern design, built-in SEO and concrete client results." },
+    fr: { title: "Réalisations — Sites Web Créés à Distance par MG", description: "Découvrez les sites créés par notre agence en ligne pour des entreprises au Maroc et à l'international : design moderne, SEO et résultats concrets." },
+    en: { title: "Work — Websites Built Remotely by MG", description: "Explore websites built by our online agency for businesses across Morocco and internationally, with modern design, SEO and concrete results." },
   },
   seo: {
-    fr: { title: "SEO Béni Mellal — Référencement Google | MG", description: "Service de référencement naturel à Béni Mellal pour être visible sur Google. Audit SEO, optimisation technique et locale. Résultats mesurables." },
-    en: { title: "SEO Béni Mellal — Google Search Optimisation | MG", description: "SEO services in Béni Mellal to improve Google visibility. SEO audits, technical and local optimisation with measurable results." },
+    fr: { title: "SEO au Maroc — Référencement à Distance | MG", description: "Service SEO à distance pour les entreprises au Maroc, notamment à Béni Mellal, et à l'international : audit, technique et visibilité mesurable." },
+    en: { title: "SEO in Morocco — Remote Search Optimisation | MG", description: "Remote SEO for businesses across Morocco, including Béni Mellal, and internationally: audits, technical optimisation and measurable visibility." },
   },
   about: {
-    fr: { title: "À Propos — Mustapha Bourigue, MG | Béni Mellal", description: "Mustapha Bourigue, développeur web et spécialiste SEO basé à Béni Mellal, 3+ ans d'expérience. Découvrez le parcours et la méthode derrière MG." },
-    en: { title: "About — Mustapha Bourigue, MG | Béni Mellal", description: "Mustapha Bourigue is a web developer and SEO specialist in Béni Mellal with 3+ years of experience. Discover the story behind MG." },
+    fr: { title: "À Propos — Maximum Growth, Agence Digitale en Ligne", description: "Découvrez Maximum Growth, agence digitale à distance fondée par Mustapha Bourigue, spécialiste web et SEO avec plus de 3 ans d'expérience." },
+    en: { title: "About — Maximum Growth, Online Digital Agency", description: "Meet Maximum Growth, a remote digital agency founded by Mustapha Bourigue, a web and SEO specialist with more than 3 years of experience." },
   },
   blog: {
-    fr: { title: "Blog — Conseils Web & SEO | MG Béni Mellal", description: "Conseils pratiques sur la création de sites web, le SEO et la visibilité en ligne pour les entreprises marocaines. Par MG, Béni Mellal." },
-    en: { title: "Blog — Web & SEO Advice | MG Béni Mellal", description: "Practical website, SEO and online visibility advice for Moroccan businesses, by MG in Béni Mellal." },
+    fr: { title: "Blog — Conseils Web, SEO & Croissance | Maximum Growth", description: "Conseils pratiques de notre agence en ligne sur les sites web, le SEO et la visibilité pour les entreprises au Maroc et à l'international." },
+    en: { title: "Blog — Web, SEO & Growth Advice | Maximum Growth", description: "Practical advice from our online agency on websites, SEO and visibility for businesses across Morocco and internationally." },
   },
   contact: {
-    fr: { title: "Contact — Devis Gratuit | MG Béni Mellal", description: "Contactez MG pour votre projet de site web ou SEO à Béni Mellal. Réponse rapide sur WhatsApp, devis gratuit sans engagement." },
-    en: { title: "Contact — Free Quote | MG Béni Mellal", description: "Contact MG about your website or SEO project in Béni Mellal. Fast WhatsApp response and a free, no-obligation quote." },
+    fr: { title: "Contact — Agence Digitale à Distance | Maximum Growth", description: "Contactez notre agence en ligne pour un projet web ou SEO au Maroc ou à l'international. Réponse rapide sur WhatsApp et devis gratuit." },
+    en: { title: "Contact — Remote Digital Agency | Maximum Growth", description: "Contact our online agency about a web or SEO project in Morocco or internationally. Fast WhatsApp response and a free quote." },
   },
 };
 
-const localBusiness = {
+const onlineBusiness = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": "Organization",
   name: "MG — Maximum Growth",
+  description: "Remote digital agency providing websites, SEO and digital growth services across Morocco and internationally.",
   founder: { "@type": "Person", name: "Mustapha Bourigue", jobTitle: "Développeur web et spécialiste SEO" },
-  address: { "@type": "PostalAddress", addressLocality: "Béni Mellal", addressCountry: "MA" },
-  areaServed: { "@type": "City", name: "Béni Mellal" },
+  areaServed: [
+    { "@type": "Country", name: "Morocco" },
+    { "@type": "City", name: "Béni Mellal" },
+    { "@type": "City", name: "Marrakech" },
+    { "@type": "City", name: "Casablanca" },
+    { "@type": "Place", name: "International" },
+  ],
   telephone: "+212699309986",
   email: "bouriguemustapha0@gmail.com",
   sameAs: ["https://www.instagram.com/mustapha_bourigue_mg", "https://www.linkedin.com/in/mustapha-bourigue"],
@@ -77,7 +83,7 @@ export function makeHead(key: PageKey, lang: Language) {
   const path = routes[key][lang];
   const alternate = routes[key][lang === "fr" ? "en" : "fr"];
   const scripts: Array<{ type: string; children: string }> = [
-    { type: "application/ld+json", children: JSON.stringify(localBusiness) },
+    { type: "application/ld+json", children: JSON.stringify(onlineBusiness) },
   ];
   if (key !== "home") {
     scripts.push({ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: lang === "fr" ? "Accueil" : "Home", item: lang === "fr" ? "/" : "/en" }, { "@type": "ListItem", position: 2, name: pageMeta.title, item: path }] }) });
