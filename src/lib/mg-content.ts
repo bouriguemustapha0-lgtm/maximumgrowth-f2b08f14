@@ -112,7 +112,8 @@ export function makeHead(key: PageKey, lang: Language) {
   const path = routes[key][lang];
   const alternate = routes[key][lang === "fr" ? "en" : "fr"];
   const scripts: Array<{ type: string; children: string }> = [
-    { type: "application/ld+json", children: JSON.stringify(onlineBusiness) },
+    { type: "application/ld+json", children: JSON.stringify(organizationSchema) },
+    { type: "application/ld+json", children: JSON.stringify(personSchema) },
   ];
   if (key !== "home") {
     scripts.push({ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: lang === "fr" ? "Accueil" : "Home", item: lang === "fr" ? "/" : "/en" }, { "@type": "ListItem", position: 2, name: pageMeta.title, item: path }] }) });
