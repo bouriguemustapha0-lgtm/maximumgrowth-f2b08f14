@@ -83,9 +83,9 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => BlogRoute,
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const EnIndexRoute = EnIndexRouteImport.update({
   id: '/en/',
@@ -138,9 +138,9 @@ const EnBlogIndexRoute = EnBlogIndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const EnBlogSlugRoute = EnBlogSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => EnBlogRoute,
+  id: '/en/blog/$slug',
+  path: '/en/blog/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -301,6 +301,7 @@ export interface RootRouteChildren {
   RealisationsRoute: typeof RealisationsRoute
   SeoRoute: typeof SeoRoute
   ServicesRoute: typeof ServicesRoute
+  BlogSlugRoute: typeof BlogSlugRoute
   EnAboutRoute: typeof EnAboutRoute
   EnContactRoute: typeof EnContactRoute
   EnFreelanceWebDesignerRoute: typeof EnFreelanceWebDesignerRoute
@@ -311,6 +312,7 @@ export interface RootRouteChildren {
   EnWorkRoute: typeof EnWorkRoute
   BlogIndexRoute: typeof BlogIndexRoute
   EnIndexRoute: typeof EnIndexRoute
+  EnBlogSlugRoute: typeof EnBlogSlugRoute
   EnBlogIndexRoute: typeof EnBlogIndexRoute
 }
 
@@ -388,10 +390,10 @@ declare module '@tanstack/react-router' {
     }
     '/blog/$slug': {
       id: '/blog/$slug'
-      path: '/$slug'
+      path: '/blog/$slug'
       fullPath: '/blog/$slug'
       preLoaderRoute: typeof BlogSlugRouteImport
-      parentRoute: typeof BlogRoute
+      parentRoute: typeof rootRouteImport
     }
     '/en/': {
       id: '/en/'
@@ -465,10 +467,10 @@ declare module '@tanstack/react-router' {
     }
     '/en/blog/$slug': {
       id: '/en/blog/$slug'
-      path: '/$slug'
+      path: '/en/blog/$slug'
       fullPath: '/en/blog/$slug'
       preLoaderRoute: typeof EnBlogSlugRouteImport
-      parentRoute: typeof EnBlogRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
@@ -483,6 +485,7 @@ const rootRouteChildren: RootRouteChildren = {
   RealisationsRoute: RealisationsRoute,
   SeoRoute: SeoRoute,
   ServicesRoute: ServicesRoute,
+  BlogSlugRoute: BlogSlugRoute,
   EnAboutRoute: EnAboutRoute,
   EnContactRoute: EnContactRoute,
   EnFreelanceWebDesignerRoute: EnFreelanceWebDesignerRoute,
@@ -493,6 +496,7 @@ const rootRouteChildren: RootRouteChildren = {
   EnWorkRoute: EnWorkRoute,
   BlogIndexRoute: BlogIndexRoute,
   EnIndexRoute: EnIndexRoute,
+  EnBlogSlugRoute: EnBlogSlugRoute,
   EnBlogIndexRoute: EnBlogIndexRoute,
 }
 export const routeTree = rootRouteImport
