@@ -19,8 +19,8 @@
  */
 
 @theme inline {
-  --font-display: "Space Grotesk", Arial, sans-serif;
-  --font-sans: "Manrope", Arial, sans-serif;
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-sans: "Fira Sans", Arial, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
