@@ -60,22 +60,51 @@ export const meta: Record<PageKey, Record<Language, { title: string; description
   },
 };
 
-const onlineBusiness = {
+const siteUrl = "https://maximumgrowth.lovable.app";
+
+const socialProfiles = ["https://www.instagram.com/mustapha_bourigue_mg", "https://www.linkedin.com/in/mustapha-bourigue"];
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${siteUrl}/#mustapha-bourigue`,
+  name: "Mustapha Bourigue",
+  jobTitle: "Web Developer & SEO Specialist",
+  description: "Founder of Maximum Growth, a remote digital agency. Web developer and SEO specialist with more than 3 years of experience building fast, search-optimised websites for businesses across Morocco and internationally.",
+  worksFor: { "@id": `${siteUrl}/#organization` },
+  knowsAbout: ["Web development", "Search engine optimisation", "React", "Next.js", "TypeScript", "Tailwind CSS", "Core Web Vitals"],
+  telephone: "+212699309986",
+  email: "bouriguemustapha0@gmail.com",
+  url: `${siteUrl}/a-propos`,
+  sameAs: socialProfiles,
+};
+
+const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "MG — Maximum Growth",
-  description: "Remote digital agency providing websites, SEO and digital growth services across Morocco and internationally.",
-  founder: { "@type": "Person", name: "Mustapha Bourigue", jobTitle: "Développeur web et spécialiste SEO" },
+  "@id": `${siteUrl}/#organization`,
+  name: "Maximum Growth",
+  alternateName: "MG",
+  url: siteUrl,
+  logo: { "@type": "ImageObject", url: `${siteUrl}/favicon.png` },
+  description: "Maximum Growth is a remote digital agency helping businesses across Morocco and internationally with websites, SEO and digital growth. No physical office — services delivered fully online.",
+  founder: { "@id": `${siteUrl}/#mustapha-bourigue` },
+  foundingDate: "2023",
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    telephone: "+212699309986",
+    email: "bouriguemustapha0@gmail.com",
+    url: `${siteUrl}/contact`,
+    availableLanguage: ["French", "English", "Arabic"],
+  },
   areaServed: [
     { "@type": "Country", name: "Morocco" },
     { "@type": "City", name: "Béni Mellal" },
     { "@type": "City", name: "Marrakech" },
     { "@type": "City", name: "Casablanca" },
-    { "@type": "Place", name: "International" },
   ],
-  telephone: "+212699309986",
-  email: "bouriguemustapha0@gmail.com",
-  sameAs: ["https://www.instagram.com/mustapha_bourigue_mg", "https://www.linkedin.com/in/mustapha-bourigue"],
+  sameAs: socialProfiles,
 };
 
 export function makeHead(key: PageKey, lang: Language) {
