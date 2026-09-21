@@ -39,7 +39,7 @@ export const articles: Record<Language, Article[]> = {
           ul: [
             "La stratégie et l'arborescence : définir les pages, les mots-clés visés et le parcours du visiteur jusqu'à la prise de contact.",
             "Le design : maquettes sur mesure ou adaptation d'un modèle existant. C'est le poste qui fait le plus varier le prix.",
-            "Le développement : intégration responsive, performance mobile, structure技 technique propre pour le référencement.",
+            "Le développement : intégration responsive, performance mobile, structure technique propre pour le référencement.",
             "Le contenu : textes, photos optimisées, traductions si le site est bilingue.",
             "Les fonctionnalités : formulaire, redirection WhatsApp, moteur de réservation, paiement en ligne, espace client.",
             "Les frais récurrents : nom de domaine et hébergement, à prévoir chaque année indépendamment du prestataire.",
