@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>/</loc><xhtml:link rel="alternate" hreflang="fr" href="/"/><xhtml:link rel="alternate" hreflang="en" href="/en"/></url>
-  <url><loc>/creation-site-web</loc><xhtml:link rel="alternate" hreflang="en" href="/en/web-design"/></url>
-  <url><loc>/freelance-site-web</loc><xhtml:link rel="alternate" hreflang="en" href="/en/freelance-web-designer"/></url>
-  <url><loc>/agence-web</loc><xhtml:link rel="alternate" hreflang="en" href="/en/web-agency"/></url>
-  <url><loc>/services</loc><xhtml:link rel="alternate" hreflang="en" href="/en/services"/></url>
-  <url><loc>/realisations</loc><xhtml:link rel="alternate" hreflang="en" href="/en/work"/></url>
-  <url><loc>/seo</loc><xhtml:link rel="alternate" hreflang="en" href="/en/seo"/></url>
-  <url><loc>/a-propos</loc><xhtml:link rel="alternate" hreflang="en" href="/en/about"/></url>
-  <url><loc>/blog</loc><xhtml:link rel="alternate" hreflang="en" href="/en/blog"/></url>
-  <url><loc>/contact</loc><xhtml:link rel="alternate" hreflang="en" href="/en/contact"/></url>
-  <url><loc>/en</loc></url><url><loc>/en/web-design</loc></url><url><loc>/en/freelance-web-designer</loc></url><url><loc>/en/web-agency</loc></url><url><loc>/en/services</loc></url><url><loc>/en/work</loc></url><url><loc>/en/seo</loc></url><url><loc>/en/about</loc></url><url><loc>/en/blog</loc></url><url><loc>/en/contact</loc></url>
+  <url><loc>https://maximumgrowth.lovable.app/</loc><xhtml:link rel="alternate" hreflang="fr" href="https://maximumgrowth.lovable.app/"/><xhtml:link rel="alternate" hreflang="en" href="https://maximumgrowth.lovable.app/en"/></url>
+  <url><loc>https://maximumgrowth.lovable.app/creation-site-web</loc><xhtml:link rel="alternate" hreflang="en" href="https://maximumgrowth.lovable.app/en/web-design"/></url>
+  <url><loc>https://maximumgrowth.lovable.app/freelance-site-web</loc><xhtml:link rel="alternate" hreflang="en" href="https://maximumgrowth.lovable.app/en/freelance-web-designer"/></url>
+  <url><loc>https://maximumgrowth.lovable.app/agence-web</loc><xhtml:link rel="alternate" hreflang="en" href="https://maximumgrowth.lovable.app/en/web-agency"/></url>
+  <url><loc>https://maximumgrowth.lovable.app/services</loc><xhtml:link rel="alternate" hreflang="en" href="https://maximumgrowth.lovable.app/en/services"/></url>
+  <url><loc>https://maximumgrowth.lovable.app/realisations</loc><xhtml:link rel="alternate" hreflang="en" href="https://maximumgrowth.lovable.app/en/work"/></url>
+  <url><loc>https://maximumgrowth.lovable.app/seo</loc><xhtml:link rel="alternate" hreflang="en" href="https://maximumgrowth.lovable.app/en/seo"/></url>
+  <url><loc>https://maximumgrowth.lovable.app/a-propos</loc><xhtml:link rel="alternate" hreflang="en" href="https://maximumgrowth.lovable.app/en/about"/></url>
+  <url><loc>https://maximumgrowth.lovable.app/blog</loc><xhtml:link rel="alternate" hreflang="en" href="https://maximumgrowth.lovable.app/en/blog"/></url>
+  <url><loc>https://maximumgrowth.lovable.app/contact</loc><xhtml:link rel="alternate" hreflang="en" href="https://maximumgrowth.lovable.app/en/contact"/></url>
+  <url><loc>https://maximumgrowth.lovable.app/en</loc></url><url><loc>https://maximumgrowth.lovable.app/en/web-design</loc></url><url><loc>https://maximumgrowth.lovable.app/en/freelance-web-designer</loc></url><url><loc>https://maximumgrowth.lovable.app/en/web-agency</loc></url><url><loc>https://maximumgrowth.lovable.app/en/services</loc></url><url><loc>https://maximumgrowth.lovable.app/en/work</loc></url><url><loc>https://maximumgrowth.lovable.app/en/seo</loc></url><url><loc>https://maximumgrowth.lovable.app/en/about</loc></url><url><loc>https://maximumgrowth.lovable.app/en/blog</loc></url><url><loc>https://maximumgrowth.lovable.app/en/contact</loc></url>
+
+  <url><loc>https://maximumgrowth.lovable.app/blog/prix-site-web-maroc-2026</loc><changefreq>monthly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximumgrowth.lovable.app/en/blog/website-cost-morocco-2026"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximumgrowth.lovable.app/blog/prix-site-web-maroc-2026"/>
+  </url>
+  <url><loc>https://maximumgrowth.lovable.app/en/blog/website-cost-morocco-2026</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://maximumgrowth.lovable.app/blog/choisir-agence-web-beni-mellal</loc><changefreq>monthly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximumgrowth.lovable.app/en/blog/choose-web-agency-beni-mellal"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximumgrowth.lovable.app/blog/choisir-agence-web-beni-mellal"/>
+  </url>
+  <url><loc>https://maximumgrowth.lovable.app/en/blog/choose-web-agency-beni-mellal</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://maximumgrowth.lovable.app/blog/site-pas-visible-sur-google</loc><changefreq>monthly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximumgrowth.lovable.app/en/blog/website-not-visible-on-google"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximumgrowth.lovable.app/blog/site-pas-visible-sur-google"/>
+  </url>
+  <url><loc>https://maximumgrowth.lovable.app/en/blog/website-not-visible-on-google</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://maximumgrowth.lovable.app/blog/site-vitrine-ou-site-reservation</loc><changefreq>monthly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximumgrowth.lovable.app/en/blog/business-website-or-booking-website"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximumgrowth.lovable.app/blog/site-vitrine-ou-site-reservation"/>
+  </url>
+  <url><loc>https://maximumgrowth.lovable.app/en/blog/business-website-or-booking-website</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://maximumgrowth.lovable.app/blog/whatsapp-business-petites-entreprises-maroc</loc><changefreq>monthly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximumgrowth.lovable.app/en/blog/whatsapp-business-moroccan-small-businesses"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximumgrowth.lovable.app/blog/whatsapp-business-petites-entreprises-maroc"/>
+  </url>
+  <url><loc>https://maximumgrowth.lovable.app/en/blog/whatsapp-business-moroccan-small-businesses</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

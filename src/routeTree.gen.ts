@@ -19,6 +19,7 @@ import { Route as FreelanceSiteWebRouteImport } from './routes/freelance-site-we
 import { Route as RealisationsRouteImport } from './routes/realisations'
 import { Route as SeoRouteImport } from './routes/seo'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as EnIndexRouteImport } from './routes/en/index'
 import { Route as EnAboutRouteImport } from './routes/en.about'
 import { Route as EnBlogRouteImport } from './routes/en.blog'
@@ -29,6 +30,7 @@ import { Route as EnServicesRouteImport } from './routes/en.services'
 import { Route as EnWebAgencyRouteImport } from './routes/en.web-agency'
 import { Route as EnWebDesignRouteImport } from './routes/en.web-design'
 import { Route as EnWorkRouteImport } from './routes/en.work'
+import { Route as EnBlogSlugRouteImport } from './routes/en.blog.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -80,6 +82,11 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
 const EnIndexRoute = EnIndexRouteImport.update({
   id: '/en/',
   path: '/en/',
@@ -130,20 +137,26 @@ const EnWorkRoute = EnWorkRouteImport.update({
   path: '/en/work',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EnBlogSlugRoute = EnBlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => EnBlogRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
   '/agence-web': typeof AgenceWebRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/creation-site-web': typeof CreationSiteWebRoute
   '/freelance-site-web': typeof FreelanceSiteWebRoute
   '/realisations': typeof RealisationsRoute
   '/seo': typeof SeoRoute
   '/services': typeof ServicesRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/en/about': typeof EnAboutRoute
-  '/en/blog': typeof EnBlogRoute
+  '/en/blog': typeof EnBlogRouteWithChildren
   '/en/contact': typeof EnContactRoute
   '/en/freelance-web-designer': typeof EnFreelanceWebDesignerRoute
   '/en/seo': typeof EnSeoRoute
@@ -152,20 +165,22 @@ export interface FileRoutesByFullPath {
   '/en/web-design': typeof EnWebDesignRoute
   '/en/work': typeof EnWorkRoute
   '/en/': typeof EnIndexRoute
+  '/en/blog/$slug': typeof EnBlogSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
   '/agence-web': typeof AgenceWebRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/creation-site-web': typeof CreationSiteWebRoute
   '/freelance-site-web': typeof FreelanceSiteWebRoute
   '/realisations': typeof RealisationsRoute
   '/seo': typeof SeoRoute
   '/services': typeof ServicesRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/en/about': typeof EnAboutRoute
-  '/en/blog': typeof EnBlogRoute
+  '/en/blog': typeof EnBlogRouteWithChildren
   '/en/contact': typeof EnContactRoute
   '/en/freelance-web-designer': typeof EnFreelanceWebDesignerRoute
   '/en/seo': typeof EnSeoRoute
@@ -174,21 +189,23 @@ export interface FileRoutesByTo {
   '/en/web-design': typeof EnWebDesignRoute
   '/en/work': typeof EnWorkRoute
   '/en': typeof EnIndexRoute
+  '/en/blog/$slug': typeof EnBlogSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
   '/agence-web': typeof AgenceWebRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/creation-site-web': typeof CreationSiteWebRoute
   '/freelance-site-web': typeof FreelanceSiteWebRoute
   '/realisations': typeof RealisationsRoute
   '/seo': typeof SeoRoute
   '/services': typeof ServicesRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/en/about': typeof EnAboutRoute
-  '/en/blog': typeof EnBlogRoute
+  '/en/blog': typeof EnBlogRouteWithChildren
   '/en/contact': typeof EnContactRoute
   '/en/freelance-web-designer': typeof EnFreelanceWebDesignerRoute
   '/en/seo': typeof EnSeoRoute
@@ -197,6 +214,7 @@ export interface FileRoutesById {
   '/en/web-design': typeof EnWebDesignRoute
   '/en/work': typeof EnWorkRoute
   '/en/': typeof EnIndexRoute
+  '/en/blog/$slug': typeof EnBlogSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -211,6 +229,7 @@ export interface FileRouteTypes {
     | '/realisations'
     | '/seo'
     | '/services'
+    | '/blog/$slug'
     | '/en/about'
     | '/en/blog'
     | '/en/contact'
@@ -221,6 +240,7 @@ export interface FileRouteTypes {
     | '/en/web-design'
     | '/en/work'
     | '/en/'
+    | '/en/blog/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -233,6 +253,7 @@ export interface FileRouteTypes {
     | '/realisations'
     | '/seo'
     | '/services'
+    | '/blog/$slug'
     | '/en/about'
     | '/en/blog'
     | '/en/contact'
@@ -243,6 +264,7 @@ export interface FileRouteTypes {
     | '/en/web-design'
     | '/en/work'
     | '/en'
+    | '/en/blog/$slug'
   id:
     | '__root__'
     | '/'
@@ -255,6 +277,7 @@ export interface FileRouteTypes {
     | '/realisations'
     | '/seo'
     | '/services'
+    | '/blog/$slug'
     | '/en/about'
     | '/en/blog'
     | '/en/contact'
@@ -265,13 +288,14 @@ export interface FileRouteTypes {
     | '/en/web-design'
     | '/en/work'
     | '/en/'
+    | '/en/blog/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AProposRoute: typeof AProposRoute
   AgenceWebRoute: typeof AgenceWebRoute
-  BlogRoute: typeof BlogRoute
+  BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
   CreationSiteWebRoute: typeof CreationSiteWebRoute
   FreelanceSiteWebRoute: typeof FreelanceSiteWebRoute
@@ -279,7 +303,7 @@ export interface RootRouteChildren {
   SeoRoute: typeof SeoRoute
   ServicesRoute: typeof ServicesRoute
   EnAboutRoute: typeof EnAboutRoute
-  EnBlogRoute: typeof EnBlogRoute
+  EnBlogRoute: typeof EnBlogRouteWithChildren
   EnContactRoute: typeof EnContactRoute
   EnFreelanceWebDesignerRoute: typeof EnFreelanceWebDesignerRoute
   EnSeoRoute: typeof EnSeoRoute
@@ -362,6 +386,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/en/': {
       id: '/en/'
       path: '/en'
@@ -432,14 +463,42 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EnWorkRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/en/blog/$slug': {
+      id: '/en/blog/$slug'
+      path: '/$slug'
+      fullPath: '/en/blog/$slug'
+      preLoaderRoute: typeof EnBlogSlugRouteImport
+      parentRoute: typeof EnBlogRoute
+    }
   }
 }
+
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
+
+interface EnBlogRouteChildren {
+  EnBlogSlugRoute: typeof EnBlogSlugRoute
+}
+
+const EnBlogRouteChildren: EnBlogRouteChildren = {
+  EnBlogSlugRoute: EnBlogSlugRoute,
+}
+
+const EnBlogRouteWithChildren =
+  EnBlogRoute._addFileChildren(EnBlogRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AProposRoute: AProposRoute,
   AgenceWebRoute: AgenceWebRoute,
-  BlogRoute: BlogRoute,
+  BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
   CreationSiteWebRoute: CreationSiteWebRoute,
   FreelanceSiteWebRoute: FreelanceSiteWebRoute,
@@ -447,7 +506,7 @@ const rootRouteChildren: RootRouteChildren = {
   SeoRoute: SeoRoute,
   ServicesRoute: ServicesRoute,
   EnAboutRoute: EnAboutRoute,
-  EnBlogRoute: EnBlogRoute,
+  EnBlogRoute: EnBlogRouteWithChildren,
   EnContactRoute: EnContactRoute,
   EnFreelanceWebDesignerRoute: EnFreelanceWebDesignerRoute,
   EnSeoRoute: EnSeoRoute,
