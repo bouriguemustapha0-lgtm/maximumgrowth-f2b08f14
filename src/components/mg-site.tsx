@@ -1,29 +1,23 @@
 import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import { ArrowRight, ArrowUpRight, Check, ChevronRight, Globe2, Instagram, Mail, Menu, MessageCircle, Phone, X } from "lucide-react";
 import { z } from "zod";
-import bougainvillaRetreat from "@/assets/bougainvilla-retreat.webp";
-import darAzur from "@/assets/dar-azur.webp";
-import maisonAurelle from "@/assets/maison-aurelle.webp";
-import mgLogo from "@/assets/mg-logo-red.png";
-import mustaphaPortrait from "@/assets/mustapha-bourigue-portrait.png";
-import redFlame from "@/assets/red-flame.webp";
-import riadDarMedinaLand from "@/assets/riad-dar-medina-land.webp";
-import riadFesBabRcif from "@/assets/riad-fes-bab-rcif.webp";
-import velsatisHotel from "@/assets/velsatis-hotel.webp";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { routes, whatsappNumber, whatsappUrl, type Language, type PageKey } from "@/lib/mg-content";
 import { articles, getArticle } from "@/lib/blog-content";
 
+const mgLogo = "/images/mg-logo-red.png";
+const mustaphaPortrait = "/images/mustapha-bourigue-portrait.png";
+
 const projectData = [
-  { name: "Riad Dar Medina Land", sector: "Riad · Marrakech", url: "https://www.riaddarmedinaland.com/", image: riadDarMedinaLand, alt: "Page d'accueil du site Riad Dar Medina Land à Marrakech" },
-  { name: "Riad Fès Bab Rcif", sector: "Riad-hôtel · Fès", url: "https://www.riadbabrciffes.com/", image: riadFesBabRcif, alt: "Page d'accueil du site Riad Fès Bab Rcif dans la médina de Fès" },
-  { name: "Velsatis Hotel", sector: "Hôtellerie · Béni Mellal", url: "https://www.velsatishotel.com/", image: velsatisHotel, alt: "Page d'accueil du site Velsatis Hotel à Béni Mellal" },
-  { name: "Bougainvilla Retreat", sector: "Maison d'hôtes · Mohammedia", url: "https://www.bougainvillaretreat.com/", image: bougainvillaRetreat, alt: "Page d'accueil du site Bougainvilla Retreat à Mohammedia" },
-  { name: "Dar Azur", sector: "Riad de luxe · Spa", url: "https://darazur.lovable.app", image: darAzur, alt: "Page d'accueil du site Dar Azur, riad de luxe à Marrakech" },
-  { name: "Maison Aurelle", sector: "Hôtel 5 étoiles", url: "https://golden-suite-showcase.lovable.app", image: maisonAurelle, alt: "Page d'accueil du site Maison Aurelle, hôtel cinq étoiles" },
-  { name: "Red Flame", sector: "Restaurant · Steakhouse", url: "https://redflame.lovable.app", image: redFlame, alt: "Page d'accueil du site du restaurant steakhouse Red Flame" },
+  { name: "Riad Dar Medina Land", sector: "Riad · Marrakech", url: "https://www.riaddarmedinaland.com/", image: "/images/riad-dar-medina-land.webp", alt: "Page d'accueil du site Riad Dar Medina Land à Marrakech" },
+  { name: "Riad Fès Bab Rcif", sector: "Riad-hôtel · Fès", url: "https://www.riadbabrciffes.com/", image: "/images/riad-fes-bab-rcif.webp", alt: "Page d'accueil du site Riad Fès Bab Rcif dans la médina de Fès" },
+  { name: "Velsatis Hotel", sector: "Hôtellerie · Béni Mellal", url: "https://www.velsatishotel.com/", image: "/images/velsatis-hotel.webp", alt: "Page d'accueil du site Velsatis Hotel à Béni Mellal" },
+  { name: "Bougainvilla Retreat", sector: "Maison d'hôtes · Mohammedia", url: "https://www.bougainvillaretreat.com/", image: "/images/bougainvilla-retreat.webp", alt: "Page d'accueil du site Bougainvilla Retreat à Mohammedia" },
+  { name: "Dar Azur", sector: "Riad de luxe · Spa", url: "https://darazur.lovable.app", image: "/images/dar-azur.webp", alt: "Page d'accueil du site Dar Azur, riad de luxe à Marrakech" },
+  { name: "Maison Aurelle", sector: "Hôtel 5 étoiles", url: "https://golden-suite-showcase.lovable.app", image: "/images/maison-aurelle.webp", alt: "Page d'accueil du site Maison Aurelle, hôtel cinq étoiles" },
+  { name: "Red Flame", sector: "Restaurant · Steakhouse", url: "https://redflame.lovable.app", image: "/images/red-flame.webp", alt: "Page d'accueil du site du restaurant steakhouse Red Flame" },
 ];
 
 const navKeys: PageKey[] = ["agency", "services", "work", "seo", "about", "blog"];
