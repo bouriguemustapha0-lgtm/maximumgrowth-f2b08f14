@@ -190,7 +190,7 @@ export const articles: Record<Language, Article[]> = {
             "Des images compressées et décrites par un texte alternatif.",
             "Un affichage rapide sur mobile : au-delà de quelques secondes, une partie des visiteurs abandonne.",
           ],
-          },
+        },
         {
           h: "Cause 4 : l'absence de présence locale",
           p: [
@@ -347,7 +347,8 @@ export const articles: Record<Language, Article[]> = {
       title: "How much does a website cost in Morocco in 2026?",
       description:
         "A website in Morocco in 2026 is priced by page count, design customisation, features and post-launch support. Here is the full breakdown of the budget.",
-      excerpt: "Website pricing in Morocco varies by project complexity. Here is what changes the final price.",
+      excerpt:
+        "Website pricing in Morocco varies by project complexity. Here is what changes the final price.",
       readTime: "7 min",
       pillar: "creation",
       pillarLabel: "Website design",
@@ -435,7 +436,9 @@ export const articles: Record<Language, Article[]> = {
         },
         {
           h: "3. A method explained upfront",
-          p: ["Before signing, you should be able to repeat the project steps in your own words. A healthy sequence looks like this:"],
+          p: [
+            "Before signing, you should be able to repeat the project steps in your own words. A healthy sequence looks like this:",
+          ],
           ul: [
             "A scoping conversation about your business, your customers and your goals.",
             "A page structure and designs approved before any development starts.",
@@ -447,7 +450,7 @@ export const articles: Record<Language, Article[]> = {
         {
           h: "4. Search handled during the build",
           p: [
-            "Search optimisation is not an add-on bolted on afterwards. It is prepared during design: one page per search intent, unique titles and descriptions, light and described images, a consistent heading structure. An agency proposing to \"do the SEO later\" will sell you the same work twice.",
+            'Search optimisation is not an add-on bolted on afterwards. It is prepared during design: one page per search intent, unique titles and descriptions, light and described images, a consistent heading structure. An agency proposing to "do the SEO later" will sell you the same work twice.',
           ],
         },
         {
@@ -459,7 +462,7 @@ export const articles: Record<Language, Article[]> = {
         {
           h: "Warning signs",
           ul: [
-            "A guaranteed \"first place on Google\" — nobody can guarantee that.",
+            'A guaranteed "first place on Google" — nobody can guarantee that.',
             "A one-line quote with no breakdown of deliverables.",
             "No links to sites that are actually live.",
             "Refusing to transfer ownership of your domain name.",
@@ -487,7 +490,7 @@ export const articles: Record<Language, Article[]> = {
         {
           p: [
             "If your website does not appear on Google, the cause is almost always one of four: the pages are not indexed, the content matches no real search, the technical structure stops Google from understanding the site, or the site is simply too new to rank yet. Each one can be checked in minutes with free tools.",
-            "Start with the simplest test: type \"site:\" followed by your address into Google, with no space. If no page appears, your problem is indexing. If pages appear but nobody finds you, your problem is ranking.",
+            'Start with the simplest test: type "site:" followed by your address into Google, with no space. If no page appears, your problem is indexing. If pages appear but nobody finds you, your problem is ranking.',
           ],
         },
         {
@@ -499,13 +502,15 @@ export const articles: Record<Language, Article[]> = {
         {
           h: "Cause 2: the content targets no search",
           p: [
-            "Many sites describe the business in its own vocabulary while customers search in theirs. A page called \"Our services\" ranks for nothing; a page called \"Website design in Morocco\" targets an existing search. Each page should answer one precise search intent, and only one, so your own pages stop competing with each other.",
+            'Many sites describe the business in its own vocabulary while customers search in theirs. A page called "Our services" ranks for nothing; a page called "Website design in Morocco" targets an existing search. Each page should answer one precise search intent, and only one, so your own pages stop competing with each other.',
             "Check length too: a three-sentence page does not answer enough to rank. A useful service page runs at least 300 to 500 words, an in-depth article 600 to 900.",
           ],
         },
         {
           h: "Cause 3: technical structure",
-          p: ["Google reads your site as a structured document. Without that structure it guesses badly. Check:"],
+          p: [
+            "Google reads your site as a structured document. Without that structure it guesses badly. Check:",
+          ],
           ul: [
             "One main heading (H1) per page, followed by ordered subheadings.",
             "A unique title and description for every page, never duplicated.",
@@ -544,7 +549,8 @@ export const articles: Record<Language, Article[]> = {
       title: "Business website or booking website: which should you choose?",
       description:
         "Business website or online booking: compare both options, their cost, their timeline and the exact point where a booking system starts paying for itself.",
-      excerpt: "A business website presents your company. Booking becomes necessary when customers need to reserve or pay directly.",
+      excerpt:
+        "A business website presents your company. Booking becomes necessary when customers need to reserve or pay directly.",
       readTime: "6 min",
       pillar: "services",
       pillarLabel: "Services",
@@ -604,7 +610,8 @@ export const articles: Record<Language, Article[]> = {
       title: "How WhatsApp Business helps Moroccan small businesses",
       description:
         "WhatsApp Business helps Moroccan small businesses reply faster, build trust and turn website visitors into customers. A practical setup guide.",
-      excerpt: "In Morocco, most customers prefer WhatsApp to email. Here is how to integrate it into your website.",
+      excerpt:
+        "In Morocco, most customers prefer WhatsApp to email. Here is how to integrate it into your website.",
       readTime: "6 min",
       pillar: "services",
       pillarLabel: "Services",
@@ -670,10 +677,12 @@ export function getArticle(lang: Language, slug: string) {
 
 export function articleHead(lang: Language, slug: string) {
   const article = getArticle(lang, slug);
-  const other = articles[lang === "fr" ? "en" : "fr"][articles[lang].findIndex((a) => a.slug === slug)];
+  const other =
+    articles[lang === "fr" ? "en" : "fr"][articles[lang].findIndex((a) => a.slug === slug)];
   const base = routes.blog[lang];
   const path = `${base}/${slug}`;
-  if (!article) return { meta: [{ title: lang === "fr" ? "Article introuvable" : "Article not found" }] };
+  if (!article)
+    return { meta: [{ title: lang === "fr" ? "Article introuvable" : "Article not found" }] };
   return {
     meta: [
       { title: `${article.title} | MG` },
@@ -686,7 +695,15 @@ export function articleHead(lang: Language, slug: string) {
     ],
     links: [
       { rel: "canonical", href: path },
-      ...(other ? [{ rel: "alternate", hrefLang: lang === "fr" ? "en" : "fr", href: `${routes.blog[lang === "fr" ? "en" : "fr"]}/${other.slug}` }] : []),
+      ...(other
+        ? [
+            {
+              rel: "alternate",
+              hrefLang: lang === "fr" ? "en" : "fr",
+              href: `${routes.blog[lang === "fr" ? "en" : "fr"]}/${other.slug}`,
+            },
+          ]
+        : []),
     ],
     scripts: [
       {
@@ -697,8 +714,16 @@ export function articleHead(lang: Language, slug: string) {
           headline: article.title,
           description: article.description,
           inLanguage: lang,
-          author: { "@type": "Person", "@id": "https://maximumgrowth.lovable.app/#mustapha-bourigue", name: "Mustapha Bourigue" },
-          publisher: { "@type": "Organization", "@id": "https://maximumgrowth.lovable.app/#organization", name: "Maximum Growth" },
+          author: {
+            "@type": "Person",
+            "@id": "https://maximumgrowth.lovable.app/#mustapha-bourigue",
+            name: "Mustapha Bourigue",
+          },
+          publisher: {
+            "@type": "Organization",
+            "@id": "https://maximumgrowth.lovable.app/#organization",
+            name: "Maximum Growth",
+          },
           mainEntityOfPage: path,
         }),
       },
@@ -708,7 +733,12 @@ export function articleHead(lang: Language, slug: string) {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: lang === "fr" ? "Accueil" : "Home", item: routes.home[lang] },
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: lang === "fr" ? "Accueil" : "Home",
+              item: routes.home[lang],
+            },
             { "@type": "ListItem", position: 2, name: "Blog", item: base },
             { "@type": "ListItem", position: 3, name: article.title, item: path },
           ],

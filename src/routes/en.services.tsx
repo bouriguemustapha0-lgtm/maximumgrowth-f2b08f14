@@ -1,4 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { StandardPage } from "@/components/mg-site";
 import { makeHead } from "@/lib/mg-content";
-export const Route = createFileRoute("/en/services")({ head: () => makeHead("services", "en"), component: () => <StandardPage lang="en" pageKey="services" /> });
+export const Route = createFileRoute("/en/services")({
+  head: () => makeHead("services", "en"),
+  component: () => <StandardPage lang="en" pageKey="services" />,
+});
