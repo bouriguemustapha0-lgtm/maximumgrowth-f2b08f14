@@ -60,7 +60,7 @@ export const meta: Record<PageKey, Record<Language, { title: string; description
   },
 };
 
-const siteUrl = "https://maximumgrowth.lovable.app";
+const siteUrl = "https://maximumgrowth.online";
 
 const socialProfiles = ["https://www.instagram.com/mustapha_bourigue_mg", "https://www.linkedin.com/in/mustapha-bourigue"];
 
