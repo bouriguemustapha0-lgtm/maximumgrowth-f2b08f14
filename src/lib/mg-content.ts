@@ -62,7 +62,12 @@ export const meta: Record<PageKey, Record<Language, { title: string; description
 
 const siteUrl = "https://maximumgrowth.online";
 
-const socialProfiles = ["https://www.instagram.com/mustapha_bourigue_mg", "https://www.linkedin.com/in/mustapha-bourigue"];
+const socialProfiles = [
+  "https://www.instagram.com/mustapha_bourigue_mg",
+  "https://www.linkedin.com/in/mustapha-bourigue-aa244b408/",
+  "https://x.com/mustapha399081",
+  "https://web.facebook.com/profile.php?id=61594690434234",
+];
 
 const personSchema = {
   "@context": "https://schema.org",
