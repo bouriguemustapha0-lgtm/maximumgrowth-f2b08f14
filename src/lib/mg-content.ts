@@ -121,7 +121,7 @@ export function makeHead(key: PageKey, lang: Language) {
     { type: "application/ld+json", children: JSON.stringify(personSchema) },
   ];
   if (key !== "home") {
-    scripts.push({ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: lang === "fr" ? "Accueil" : "Home", item: lang === "fr" ? "/" : "/en" }, { "@type": "ListItem", position: 2, name: pageMeta.title, item: path }] }) });
+    scripts.push({ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: lang === "fr" ? "Accueil" : "Home", item: `${siteUrl}${lang === "fr" ? "/" : "/en"}` }, { "@type": "ListItem", position: 2, name: pageMeta.title, item: `${siteUrl}${path}` }] }) });
   }
   if (key === "creation") {
     const faq = lang === "fr" ? [

@@ -708,9 +708,9 @@ export function articleHead(lang: Language, slug: string) {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: lang === "fr" ? "Accueil" : "Home", item: routes.home[lang] },
-            { "@type": "ListItem", position: 2, name: "Blog", item: base },
-            { "@type": "ListItem", position: 3, name: article.title, item: path },
+            { "@type": "ListItem", position: 1, name: lang === "fr" ? "Accueil" : "Home", item: `https://maximumgrowth.online${routes.home[lang]}` },
+            { "@type": "ListItem", position: 2, name: "Blog", item: `https://maximumgrowth.online${base}` },
+            { "@type": "ListItem", position: 3, name: article.title, item: `https://maximumgrowth.online${path}` },
           ],
         }),
       },
