@@ -18,6 +18,7 @@ import { Route as FreelanceSiteWebRouteImport } from './routes/freelance-site-we
 import { Route as RealisationsRouteImport } from './routes/realisations'
 import { Route as SeoRouteImport } from './routes/seo'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as EnIndexRouteImport } from './routes/en/index'
@@ -75,6 +76,11 @@ const SeoRoute = SeoRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -153,6 +159,7 @@ export interface FileRoutesByFullPath {
   '/realisations': typeof RealisationsRoute
   '/seo': typeof SeoRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/en/about': typeof EnAboutRoute
   '/en/contact': typeof EnContactRoute
@@ -177,6 +184,7 @@ export interface FileRoutesByTo {
   '/realisations': typeof RealisationsRoute
   '/seo': typeof SeoRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/en/about': typeof EnAboutRoute
   '/en/contact': typeof EnContactRoute
@@ -202,6 +210,7 @@ export interface FileRoutesById {
   '/realisations': typeof RealisationsRoute
   '/seo': typeof SeoRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/en/about': typeof EnAboutRoute
   '/en/contact': typeof EnContactRoute
@@ -228,6 +237,7 @@ export interface FileRouteTypes {
     | '/realisations'
     | '/seo'
     | '/services'
+    | '/sitemap.xml'
     | '/blog/$slug'
     | '/en/about'
     | '/en/contact'
@@ -252,6 +262,7 @@ export interface FileRouteTypes {
     | '/realisations'
     | '/seo'
     | '/services'
+    | '/sitemap.xml'
     | '/blog/$slug'
     | '/en/about'
     | '/en/contact'
@@ -276,6 +287,7 @@ export interface FileRouteTypes {
     | '/realisations'
     | '/seo'
     | '/services'
+    | '/sitemap.xml'
     | '/blog/$slug'
     | '/en/about'
     | '/en/contact'
@@ -301,6 +313,7 @@ export interface RootRouteChildren {
   RealisationsRoute: typeof RealisationsRoute
   SeoRoute: typeof SeoRoute
   ServicesRoute: typeof ServicesRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   BlogSlugRoute: typeof BlogSlugRoute
   EnAboutRoute: typeof EnAboutRoute
   EnContactRoute: typeof EnContactRoute
@@ -379,6 +392,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -485,6 +505,7 @@ const rootRouteChildren: RootRouteChildren = {
   RealisationsRoute: RealisationsRoute,
   SeoRoute: SeoRoute,
   ServicesRoute: ServicesRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   BlogSlugRoute: BlogSlugRoute,
   EnAboutRoute: EnAboutRoute,
   EnContactRoute: EnContactRoute,
